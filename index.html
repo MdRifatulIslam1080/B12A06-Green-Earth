@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tailwind css and daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="bg-[#15803D] p-5 px-15 text-white flex justify-between">
+      <div class="font-medium">Green Earth</div>
+      <div class="gap-6 flex">
+        <a href="">About</a>
+        <a href="">Gallery</a>
+        <a href="">Plant a Tree</a>
+      </div>
+      <div class="">
+        <button
+          class="rounded-[50px] bg-[#FACC15] text-[#15803D] p-2 px-4 font-medium text-[16px]"
+        >
+          Plant a Tree
+        </button>
+      </div>
+    </nav>
+    <main>
+      <!-- Banner section -->
+      <section class="bg-[#CFF0DC] text-center relative h-[383px]">
+        <div
+          class="z-40 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <h1 class="text-[48px] font-bold">Plant a Tree, Grow a Future</h1>
+          <h6 class="pt-1 pb-6">
+            Join our mission to plant 1 million trees and make the Earth greener
+            for future generations.
+          </h6>
+          <button
+            class="rounded-[50px] bg-[#FACC15] text-[#15803D] p-2 px-4 font-medium text-[16px]"
+          >
+            Get Involved
+          </button>
+        </div>
+        <div
+          class="flex justify-between absolute bottom-0 left-0 w-full inset-0 z-0"
+        >
+          <img src="./assets/hero-leaf1.png" alt="" class="" />
+          <img src="./assets/hero-leaf2.png" alt="" class="" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
