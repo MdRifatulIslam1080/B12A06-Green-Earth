@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- tailwind css and daisyui -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -211,11 +219,22 @@
               </div>
             </div>
           </div>
-          <div class="border"></div>
+          <div class="border p-2 bg-white">
+            <h2 class="font-semibold text-[20px]">Your Cart</h2>
+            <div
+              class="bg-[#F0FDF4] w-full p-3 flex justify-between items-center rounded-lg"
+            >
+              <div class="">
+                <h4 class="font-medium">Mango Tree</h4>
+                <p>৳500 x 1</p>
+              </div>
+              <div class=""><i class="fa-solid fa-circle-xmark"></i></div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- our impact section -->
-      <section class="bg-[#CFF0DC] text-center p-15">
+      <section class="bg-[#CFF0DC] rounded-lg text-center p-15">
         <h3 class="text-[32px] font-semibold mb-5">Our Impact</h3>
         <div class="flex gap-10">
           <div
