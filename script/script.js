@@ -1,4 +1,5 @@
 let cateId = "cate-id-all-trees";
+let cartData = [];
 
 const loadPlants = (categoryId = "") => {
   fetch(
@@ -24,7 +25,7 @@ const displayPlants = (plants) => {
               plant.image
             }" alt="${plant.name}" />
             <h4 class="font-semibold">${plant.name}</h4>
-            <p>${plant.description}</p>
+            <p class="mb-2">${plant.description}</p>
             <div class="flex justify-between w-full">
                 <span class="bg-green-100 text-green-500 font-medium rounded-[50px] p-1 px-3">${
                   plant.category
@@ -114,6 +115,75 @@ const showPlantDetails = (plant) => {
 
 const onAddToCart = (id) => {
   console.log("Add to cart clicked for plant ID:", id);
+
+  getPlantData(id);
+};
+
+const getPlantData = (id) => {
+  fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
+    .then((res) => res.json())
+    .then((data) => calculateCart(data.plants));
+};
+
+const calculateCart = (singleData) => {
+  const exist = cartData.find((element) => element.id === singleData.id);
+  if (exist) {
+    const newCartData = cartData.map((plant) => {
+      return plant.id === singleData.id
+        ? {
+            ...plant,
+            quantity: plant.quantity + 1,
+          }
+        : plant;
+    });
+    cartData = [...newCartData];
+  } else {
+    cartData.push({
+      id: singleData.id,
+      name: singleData.name,
+      price: singleData.price,
+      quantity: 1,
+    });
+  }
+
+  displayCart();
+};
+
+const displayCart = () => {
+  const cartContainer = document.getElementById("cart-container");
+  const totalAmountText = document.getElementById("total-amount");
+  const total = calCulateTotal();
+  cartContainer.innerHTML = "";
+  for (const plant of cartData) {
+    const div = document.createElement("div");
+    const cartCard = `
+        <div
+        class="bg-[#F0FDF4] w-full p-3 flex justify-between items-center rounded-lg"
+        >
+        <div class="">
+        <h4 class="font-medium">${plant.name}</h4>
+        <p>৳${plant.price} x ${plant.quantity}</p>
+        </div>
+        <button onclick="onRemove(${plant.id})" class=""><i class="fa-solid fa-circle-xmark"></i></button>
+        </div>
+        `;
+    div.innerHTML = cartCard;
+    cartContainer.append(div);
+  }
+  totalAmountText.innerText = "৳" + total;
+};
+
+const calCulateTotal = () => {
+  let sum = 0;
+  for (const plant of cartData) {
+    sum += plant.price * plant.quantity;
+  }
+  return sum;
+};
+
+const onRemove = (id) => {
+  cartData = cartData.filter((plant) => plant.id !== id);
+  displayCart();
 };
 
 loadCategories();

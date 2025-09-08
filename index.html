@@ -80,15 +80,11 @@
           ></div>
           <div class="p-2 bg-white rounded-lg">
             <h2 class="font-semibold text-[20px]">Your Cart</h2>
-            <div
-              class="bg-[#F0FDF4] w-full p-3 flex justify-between items-center rounded-lg"
-            >
-              <div class="">
-                <h4 class="font-medium">Mango Tree</h4>
-                <p>৳500 x 1</p>
-              </div>
-              <div class=""><i class="fa-solid fa-circle-xmark"></i></div>
-            </div>
+            <div class="flex flex-col gap-4 mb-4" id="cart-container"></div>
+            <hr />
+            <h2 class="flex items-center justify-between text-lg font-medium">
+              <span>Total:</span> <span id="total-amount"></span>
+            </h2>
           </div>
         </div>
       </section>
@@ -112,7 +108,7 @@
               500,000 trees worldwide. By joining our campaign, you help restore
               forests, create habitats for wildlife, and combat global warming.
             </p>
-            <ul class="my-5 ml-2">
+            <ul class="my-5 ml-2 list-disc pl-5">
               <li>Restoration of natural habitats</li>
               <li>Improvement of air quality</li>
               <li>Support for local communities</li>
