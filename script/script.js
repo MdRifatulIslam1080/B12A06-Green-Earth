@@ -97,15 +97,14 @@ const showPlantDetails = (plant) => {
         <img src="${plant.image}" alt="${plant.name}" class="w-full h-80 object-cover rounded-lg mb-4"/>
         <h2 class="text-2xl font-bold mb-2">${plant.name}</h2>
         <p class="text-gray-600 mb-4">${plant.description}</p>
-        <div class="flex items-center justify-between mb-2">
-            <span class="font-medium">Category:</span>
-            <span class="bg-green-100 text-green-500 font-medium rounded-[50px] p-1 px-3">${plant.category}</span>
+        <div class=" mb-2">
+            <span class="font-medium">Category:</span><span class=" text-green-500 font-medium  p-1 px-3">${plant.category}</span>
         </div>
-        <div class="flex items-center justify-between mb-4">
+        <div class=" mb-4">
             <span class="font-medium">Price:</span>
             <span class="text-lg font-bold">৳${plant.price}</span>
         </div>
-        <p class="text-sm text-gray-500">${plant.care_instructions}</p>
+       
     `;
 
   // Show the modal using DaisyUI's built-in method
