@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="bg-[#15803D] p-5 px-15 text-white flex justify-between">
+    <nav class="bg-[#15803D] p-5 md:px-15 text-white flex justify-between">
       <div class="font-medium">Green Earth</div>
       <div class="gap-6 flex">
         <a href="">About</a>
@@ -43,7 +43,9 @@
         <div
           class="z-40 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
-          <h1 class="text-[48px] font-bold">Plant a Tree, Grow a Future</h1>
+          <h1 class="text-[30px] md:text-[48px] font-bold">
+            Plant a Tree, Grow a Future
+          </h1>
           <h6 class="pt-1 pb-6">
             Join our mission to plant 1 million trees and make the Earth greener
             for future generations.
@@ -57,29 +59,32 @@
         <div
           class="flex justify-between absolute bottom-0 left-0 w-full inset-0 z-0"
         >
-          <img src="./assets/hero-leaf1.png" alt="" class="" />
-          <img src="./assets/hero-leaf2.png" alt="" class="" />
+          <img src="./assets/hero-leaf1.png" alt="" class="hidden lg:block" />
+          <img src="./assets/hero-leaf2.png" alt="" class="hidden lg:block" />
         </div>
       </section>
       <!-- choose your tree section -->
+
       <section class="">
         <h1 class="text-[32px] font-medium text-center py-5">
           Choose Your Trees
         </h1>
-        <div class="grid grid-cols-6 gap-5 max-w-[1650px] mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-6 gap-5 max-w-[1650px] mx-auto"
+        >
           <!-- categories -->
-          <div class="">
+          <div class="px-5 text-center md:text-left md:px-2 lg:px-3">
             <h2 class="text-[20px] font-semibold p-2">Categories</h2>
 
-            <ul id="categories-container"></ul>
+            <ul id="categories-container" class=""></ul>
           </div>
           <!-- middle -->
           <div
             id="plant-container"
-            class="col-span-4 gap-5 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3"
+            class="md:col-span-4 gap-5 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3"
           ></div>
           <div class="p-2 bg-white rounded-lg">
-            <h2 class="font-semibold text-[20px]">Your Cart</h2>
+            <h2 class="font-semibold text-[20px] mb-4">Your Cart</h2>
             <div class="flex flex-col gap-4 mb-4" id="cart-container"></div>
             <hr />
             <h2 class="flex items-center justify-between text-lg font-medium">
@@ -89,19 +94,21 @@
         </div>
       </section>
       <!-- about the campaign -->
-      <section class="max-w-[1090px] mx-auto py-20">
-        <h1 class="text-center pb-10 text-[32px] font-semibold">
+      <section class="max-w-[1090px] mx-auto md:py-20">
+        <h1 class="text-center py-5 pt-10 md:pb-10 text-[32px] font-semibold">
           About The Campaign
         </h1>
-        <div class="flex justify-between gap-15 items-center">
-          <div class="bg-[]">
+        <div
+          class="md:flex md:justify-between md:gap-2 lg:gap-15 md:items-center"
+        >
+          <div class="p-5 md:px-10 lg:p-0 lg:px">
             <img
-              class="max-w-[530px] max-h-[530px]"
+              class="md:max-w-[300px] md:max-h-[300px] lg:max-w-[530px] lg:max-h-[530px]"
               src="./assets/about.png"
               alt=""
             />
           </div>
-          <div class="">
+          <div class="p-6 md:p-0">
             <p>
               Green Earth is a global tree plantation initiative dedicated to
               fighting climate change. Since our start, we’ve planted over
@@ -117,9 +124,11 @@
         </div>
       </section>
       <!-- our impact section -->
-      <section class="bg-[#CFF0DC] rounded-lg text-center p-15">
-        <h3 class="text-[32px] font-semibold mb-5">Our Impact</h3>
-        <div class="flex gap-10">
+      <section class="bg-[#CFF0DC] text-center pb-10 md:p-15">
+        <h3 class="text-[32px] font-semibold mb-5 pt-5 md:pt-0">Our Impact</h3>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-10"
+        >
           <div
             class="bg-white rounded-xl p-10 w-1/3 shadow-lg hover:bg-green-200"
           >
@@ -142,7 +151,7 @@
       </section>
       <!-- plant a tree today section -->
       <section
-        class="py-20 bg-[#166534] flex flex-col justify-center items-center w-full"
+        class="py-10 pb-15 md:py-20 bg-[#166534] flex flex-col justify-center items-center w-full px-5 md:px-0"
       >
         <h3 class="text-[32px] font-semibold mb-5 text-white">
           Plant a Tree Today

@@ -58,7 +58,7 @@ const displayCategories = (categories) => {
   const li = document.createElement("li");
   const allTrees = `
       <button id="cate-id-all-trees" onclick="changeCategory('all-trees')"
-        class="hover:bg-[#15803D] hover:text-white w-full text-left rounded-sm p-1 px-2" >
+        class="hover:bg-[#15803D]  hover:text-white w-full text-left rounded-sm p-1 px-2" >
         All Trees
      </button>`;
   li.innerHTML = allTrees;
@@ -158,7 +158,7 @@ const displayCart = () => {
     const div = document.createElement("div");
     const cartCard = `
         <div
-        class="bg-[#F0FDF4] w-full p-3 flex justify-between items-center rounded-lg"
+        class="bg-green-100 w-full p-3 flex justify-between items-center rounded-lg"
         >
         <div class="">
         <h4 class="font-medium">${plant.name}</h4>
