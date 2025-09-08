@@ -63,7 +63,9 @@
       </section>
       <!-- choose your tree section -->
       <section class="">
-        <h1 class="text-[32px] font-medium text-center">Choose Your Trees</h1>
+        <h1 class="text-[32px] font-medium text-center py-5">
+          Choose Your Trees
+        </h1>
         <div class="grid grid-cols-6 gap-5 max-w-[1650px] mx-auto">
           <!-- categories -->
           <div class="">
@@ -76,7 +78,7 @@
             id="plant-container"
             class="col-span-4 gap-5 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3"
           ></div>
-          <div class="border p-2 bg-white">
+          <div class="p-2 bg-white rounded-lg">
             <h2 class="font-semibold text-[20px]">Your Cart</h2>
             <div
               class="bg-[#F0FDF4] w-full p-3 flex justify-between items-center rounded-lg"
@@ -87,6 +89,34 @@
               </div>
               <div class=""><i class="fa-solid fa-circle-xmark"></i></div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- about the campaign -->
+      <section class="max-w-[1090px] mx-auto py-20">
+        <h1 class="text-center pb-10 text-[32px] font-semibold">
+          About The Campaign
+        </h1>
+        <div class="flex justify-between gap-15 items-center">
+          <div class="bg-[]">
+            <img
+              class="max-w-[530px] max-h-[530px]"
+              src="./assets/about.png"
+              alt=""
+            />
+          </div>
+          <div class="">
+            <p>
+              Green Earth is a global tree plantation initiative dedicated to
+              fighting climate change. Since our start, we’ve planted over
+              500,000 trees worldwide. By joining our campaign, you help restore
+              forests, create habitats for wildlife, and combat global warming.
+            </p>
+            <ul class="my-5 ml-2">
+              <li>Restoration of natural habitats</li>
+              <li>Improvement of air quality</li>
+              <li>Support for local communities</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -193,6 +223,20 @@
     <footer class="bg-[#14532D] text-white text-center py-6">
       <h5>© 2025 Green Earth. All Rights Reserved.</h5>
     </footer>
+    <!-- modal -->
+    <dialog id="my_modal" class="modal">
+      <div
+        class="modal-box w-11/12 max-w-2xl bg-white p-6 rounded-lg shadow-xl"
+      >
+        <form method="dialog">
+          <button class="btn absolute right-2 bottom-2 font-medium">
+            Close
+          </button>
+        </form>
+        <div id="modal-content"></div>
+      </div>
+    </dialog>
+    <!-- script -->
     <script src="./script/script.js"></script>
   </body>
 </html>
