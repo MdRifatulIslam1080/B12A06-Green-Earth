@@ -82,7 +82,19 @@
           <div
             id="plant-container"
             class="md:col-span-4 gap-5 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3"
-          ></div>
+          >
+            <!-- loading -->
+            <div
+              class="md:col-span-2 lg:col-span-3 h-[400px] flex justify-center items-center"
+            >
+              <div id="loading-spinner" class="col-span-full text-center">
+                <span
+                  class="loading loading-spinner text-green-500 loading-lg"
+                ></span>
+                <p class="mt-2 text-green-500">Loading plants...</p>
+              </div>
+            </div>
+          </div>
           <div class="p-2 bg-white rounded-lg shadow-md">
             <h2 class="font-semibold text-[20px] mb-4">Your Cart</h2>
             <div class="flex flex-col gap-4 mb-4" id="cart-container"></div>
