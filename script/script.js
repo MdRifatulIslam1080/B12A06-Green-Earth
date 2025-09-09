@@ -17,7 +17,7 @@ const displayPlants = (plants) => {
     // Use 'of' for iterables like arrays
     const newDiv = document.createElement("div");
     const plantCard = `
-      <div class="bg-white p-4 rounded-lg gap-2 grid">
+      <div class="bg-white p-4 rounded-lg gap-2 grid shadow-md">
         <div onclick='showPlantDetails(${JSON.stringify(
           plant
         )})' class="cursor-pointer">
